@@ -1,0 +1,6 @@
+package-as: Odkrywca
+
+ignore:
+  - media
+  - README.md
+  - CHANGELOG.md

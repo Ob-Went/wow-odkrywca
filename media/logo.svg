@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <radialGradient id="parch" cx="50%" cy="45%" r="70%">
+      <stop offset="0" stop-color="#f2dfb0"/>
+      <stop offset="0.65" stop-color="#d9b97c"/>
+      <stop offset="1" stop-color="#9c7440"/>
+    </radialGradient>
+    <radialGradient id="bg" cx="50%" cy="40%" r="75%">
+      <stop offset="0" stop-color="#2e2318"/>
+      <stop offset="1" stop-color="#120d08"/>
+    </radialGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fff1b8"/>
+      <stop offset="0.5" stop-color="#f2c14e"/>
+      <stop offset="1" stop-color="#a8701c"/>
+    </linearGradient>
+    <radialGradient id="pinIn" cx="40%" cy="35%" r="70%">
+      <stop offset="0" stop-color="#3a3026"/>
+      <stop offset="1" stop-color="#14100b"/>
+    </radialGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#000" flood-opacity="0.55"/>
+    </filter>
+    <filter id="grain">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="4"/>
+      <feColorMatrix values="0 0 0 0 0.35  0 0 0 0 0.24  0 0 0 0 0.1  0 0 0 0.18 0"/>
+      <feComposite in2="SourceGraphic" operator="in"/>
+    </filter>
+    <clipPath id="mapClip">
+      <path id="mapShape" d="M58 70 L120 58 L170 66 L240 54 L300 64 L372 52 L452 66 L460 130 L450 200 L462 270 L452 330 L456 380 L398 392 L330 384 L262 396 L190 386 L120 394 L56 384 L64 320 L52 250 L62 180 L50 120 Z"/>
+    </clipPath>
+  </defs>
+
+  <!-- tlo -->
+  <rect width="512" height="512" rx="64" fill="url(#bg)"/>
+  <rect x="10" y="10" width="492" height="492" rx="56" fill="none" stroke="#7a5a2a" stroke-width="4"/>
+
+  <!-- mapa -->
+  <g filter="url(#shadow)">
+    <use href="#mapShape" fill="url(#parch)"/>
+  </g>
+  <g clip-path="url(#mapClip)">
+    <rect x="40" y="40" width="440" height="370" fill="#000" filter="url(#grain)"/>
+    <!-- linie brzegowe / laki -->
+    <path d="M70 300 C110 270 140 300 170 280 S230 230 210 190 S240 120 300 130 S380 110 400 160 S430 230 470 240" fill="none" stroke="#8a6436" stroke-width="3" opacity="0.55"/>
+    <path d="M70 318 C112 290 146 318 178 298 S244 248 226 196" fill="none" stroke="#8a6436" stroke-width="1.5" opacity="0.4"/>
+    <path d="M300 300 C330 280 370 300 360 330 S300 350 300 300 Z" fill="#7d9c6a" opacity="0.35"/>
+    <path d="M90 120 l14 -22 l14 22 M110 128 l12 -18 l12 18 M128 116 l12 -20 l12 20" fill="none" stroke="#7a5630" stroke-width="2.5" opacity="0.5"/>
+    <!-- szlak -->
+    <path d="M140 300 C190 250 230 290 262 230 S320 175 352 168" fill="none" stroke="#9b2f22" stroke-width="4" stroke-dasharray="2 12" stroke-linecap="round" opacity="0.85"/>
+  </g>
+
+  <!-- roza wiatrow -->
+  <g transform="translate(418 104)" opacity="0.8">
+    <circle r="26" fill="none" stroke="#6b4b25" stroke-width="2"/>
+    <path d="M0 -34 L6 0 L0 34 L-6 0 Z" fill="#6b4b25"/>
+    <path d="M-34 0 L0 6 L34 0 L0 -6 Z" fill="#8a6a3c"/>
+    <path d="M0 -34 L6 0 L-6 0 Z" fill="#9b2f22"/>
+    <text y="-38" text-anchor="middle" font-family="DejaVu Serif" font-weight="bold" font-size="13" fill="#6b4b25">N</text>
+  </g>
+
+  <!-- pinezka: zioło -->
+  <g transform="translate(140 296)" filter="url(#shadow)">
+    <circle r="38" fill="#4de65a"/>
+    <circle r="31" fill="url(#pinIn)"/>
+    <path d="M0 22 C0 6 0 -4 2 -14" stroke="#7bd36a" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <path d="M1 -2 C-20 -4 -22 -22 -6 -24 C2 -24 4 -12 1 -2 Z" fill="#5fcf54"/>
+    <path d="M2 6 C20 4 24 -14 10 -18 C2 -19 -1 -6 2 6 Z" fill="#3fae3c"/>
+    <path d="M1 -2 C-8 -8 -10 -14 -8 -20" stroke="#2d7d2a" stroke-width="1.5" fill="none"/>
+  </g>
+
+  <!-- pinezka: ruda -->
+  <g transform="translate(262 228)" filter="url(#shadow)">
+    <circle r="42" fill="#ff8c26"/>
+    <circle r="35" fill="url(#pinIn)"/>
+    <path d="M-20 12 L-12 -10 L2 -16 L18 -6 L22 12 L6 20 L-12 20 Z" fill="#7d7468"/>
+    <path d="M-12 -10 L2 -16 L4 2 L-6 6 Z" fill="#a39888"/>
+    <path d="M4 2 L18 -6 L22 12 L6 20 Z" fill="#5c554c"/>
+    <path d="M-6 6 L4 2 L6 20 L-12 20 Z" fill="#6b6359"/>
+    <circle cx="-4" cy="-4" r="4" fill="#e8964a"/>
+    <circle cx="12" cy="6" r="3.2" fill="#e8964a"/>
+    <circle cx="-8" cy="12" r="2.6" fill="#f2b15f"/>
+  </g>
+
+  <!-- pinezka: skrzynia -->
+  <g transform="translate(352 168)" filter="url(#shadow)">
+    <circle r="36" fill="#ffd11a"/>
+    <circle r="29" fill="url(#pinIn)"/>
+    <path d="M-18 -4 Q0 -22 18 -4 Z" fill="#8a5326"/>
+    <rect x="-18" y="-4" width="36" height="20" fill="#9c5f2b"/>
+    <rect x="-18" y="-4" width="36" height="4" fill="#e0b040"/>
+    <rect x="-3" y="-2" width="6" height="8" rx="1" fill="#f2cf5b"/>
+    <rect x="-18" y="13" width="36" height="3" fill="#e0b040"/>
+  </g>
+
+  <!-- napis -->
+  <text x="256" y="462" text-anchor="middle" font-family="DejaVu Serif" font-weight="bold" font-size="62" letter-spacing="4"
+        fill="url(#gold)" stroke="#2a1a08" stroke-width="3" paint-order="stroke">ODKRYWCA</text>
+</svg>
