@@ -518,6 +518,9 @@ local function RecordNode(gtype, name, unnamed)
 	node.chars[charKey] = true
 	pendingLoot = { node = node, t = GetTime() }
 
+	-- addon Dziennik (jesli jest) zapisze "pierwszy raz zebrano"
+	if not node.unnamed and Dziennik_Add then pcall(Dziennik_Add, "gather", node.name, MapName(mapID)) end
+
 	if isNew and db.settings.announce then
 		Print(T("discovered", NodeName(node), MapName(mapID), x * 100, y * 100))
 	end

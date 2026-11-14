@@ -1,5 +1,8 @@
 # Changelog
 
+## 1.2.0
+- Works with the Dziennik addon: first gathered herbs/ore are written to the journal
+
 ## 1.1.1
 - Polish text without diacritics by default (the game font lacks Polish letters)
 

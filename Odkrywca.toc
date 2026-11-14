@@ -2,7 +2,7 @@
 ## Title: Odkrywca
 ## Notes: Zapisuje ziola, rudy i skrzynie, ktore SAM zebrales, i pokazuje je na mapie swiata. / Records herbs, ore and chests YOU gathered on the world map.
 ## Author: SGlinka7
-## Version: 1.1.1
+## Version: 1.2.0
 ## SavedVariables: OdkrywcaDB
 ## IconTexture: Interface\Icons\INV_Misc_Map_01
 ## AddonCompartmentFunc: Odkrywca_OnAddonCompartmentClick
