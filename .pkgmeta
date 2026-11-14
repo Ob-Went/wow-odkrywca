@@ -4,3 +4,6 @@ ignore:
   - media
   - README.md
   - CHANGELOG.md
+  - .github
+  - .gitignore
+  - .pkgmeta
